@@ -1,11 +1,11 @@
 {
   "name": "HOME with YURA",
-  "short_name": "YURA HOME",
+  "short_name": "HOME YURA",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#08111f",
-  "theme_color": "#101827",
+  "background_color": "#f1f3f7",
+  "theme_color": "#edf2fb",
   "icons": [
     {
       "src": "icon-192.png",
