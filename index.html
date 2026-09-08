@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101827">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="HOME with YURA">
+  <title>HOME with YURA</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon-180.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">PERSONAL HOME DASHBOARD</p>
+        <h1>HOME with YURA</h1>
+      </div>
+      <button id="modeBtn" class="mode-btn">通常モード</button>
+    </header>
+
+    <section class="hero">
+      <p id="todayText" class="today"></p>
+      <h2 id="greeting">おかえり。</h2>
+      <p id="yuraTop">ユラ「今日も帰ってきたのう。」</p>
+    </section>
+
+    <section class="grid two">
+      <article class="card">
+        <p class="eyebrow">MONEY</p>
+        <h3>今月の家計</h3>
+        <label>使えるお金<input id="budget" type="number" inputmode="numeric" placeholder="0"></label>
+        <label>今月使った額<input id="spent" type="number" inputmode="numeric" placeholder="0"></label>
+        <div class="big-value"><span id="remaining">0</span><small>円 残り</small></div>
+      </article>
+
+      <article class="card">
+        <p class="eyebrow">SAVINGS</p>
+        <h3>貯金目標</h3>
+        <label>現在<input id="savings" type="number" inputmode="numeric" placeholder="0"></label>
+        <label>目標<input id="savingsGoal" type="number" inputmode="numeric" placeholder="100000"></label>
+        <div class="progress"><div id="saveBar"></div></div>
+        <p id="saveText" class="muted">0%</p>
+      </article>
+    </section>
+
+    <section class="card">
+      <div class="headrow">
+        <div><p class="eyebrow">TODAY</p><h3>今日やること</h3></div>
+        <button id="addTask" class="small-btn">＋追加</button>
+      </div>
+      <div id="taskList" class="task-list"></div>
+    </section>
+
+    <section class="card">
+      <p class="eyebrow">QUICK NOTE</p>
+      <h3>メモ</h3>
+      <textarea id="memo" rows="5" placeholder="買うもの、仕事のこと、忘れたくないこと。"></textarea>
+      <p class="muted">自動保存</p>
+    </section>
+
+    <section class="card chat-card">
+      <p class="eyebrow">YURA</p>
+      <h3>ユラさん相談</h3>
+      <div id="chatBox" class="chat-box">
+        <div class="bubble yura">「今日何したらいい？」「今月使いすぎ？」みたいに聞いておくれ。</div>
+      </div>
+      <div class="chatrow">
+        <input id="chatInput" type="text" placeholder="ユラさん、今日どうしよう">
+        <button id="sendBtn" class="primary">送信</button>
+      </div>
+      <p class="muted">Ver.0.01は端末内の簡易ユラさん。AI連携は後から追加予定。</p>
+    </section>
+
+    <section class="card">
+      <p class="eyebrow">BACKUP</p>
+      <h3>データ</h3>
+      <div class="button-row">
+        <button id="exportBtn" class="secondary">バックアップを書き出す</button>
+        <label class="secondary filelabel">バックアップを読み込む
+          <input id="importInput" type="file" accept="application/json">
+        </label>
+      </div>
+    </section>
+
+    <footer>HOME with YURA Ver.0.01</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
